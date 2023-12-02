@@ -1,0 +1,11 @@
+(define d display)(define n newline)
+(d (define (map f lst) (if (null? lst) () (cons (f (car lst)) (map f (cdr lst))))))(n)
+(d (define (add1 x) (+ 1 x)))(n) ; function add1 takes 1 argument x and returns x + 1
+(d (map add1 ()))(n)
+(d (map add1 (list 1)))(n)
+(d (map add1 (list 1 2)))(n)
+(d (define (filter p lst) (cond ((null? lst) ()) ((p (car lst)) (cons (car lst) (filter p (cdr lst)))) (#t (filter p (cdr lst))))))(n)
+(d (define (>5 x) (> x 5)))(n)
+(d (filter >5 (list 1 9 7 0 -3 1 1)))(n)
+(d (define (reduce f lst init) (if (null? lst) init (f (car lst) (reduce f (cdr lst) init)))))(n)
+(d (reduce + (list 1 2 3) 0))(n)

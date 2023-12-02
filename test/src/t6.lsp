@@ -1,0 +1,6 @@
+(define d display)(define n newline)
+(d (cons 1 2))(n)
+(d (cons 1 #f))(n)
+(d (cons (cons 1 2) 3))(n)
+(d (car (cons (cons 1 2) 3)))(n)
+(d (cdr (cons (cons 1 2) 3)))(n)

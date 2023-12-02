@@ -1,0 +1,13 @@
+(define d display)(define n newline)
+(d (list))(n)
+(d (list 1 #f 3))(n)
+(d (list? ()))(n)
+(d (list? (cons 1 (cons 1 ()))))(n) ; note, this is different from the report
+(d (list? (cons 1 (cons 2 3))))(n)
+(d (length (list 1 2 3)))(n)
+(d (length ()))(n)
+(d (length (cons 1 ())))(n)
+(d (append (list 1 2 3) (list 4 5 6)))(n)
+(d (append () (list 4 5 6)))(n)
+(d (append (list 1 2 3) ()))(n)
+(d (append () ()))(n)
